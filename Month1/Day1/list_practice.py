@@ -112,3 +112,17 @@ for k in list5:
     total = total + k
 print("Sum of numbers in the list: ", total)
 
+# PROBLEM 6 - Second Largest Element (Without Sorting)
+list6 = [5,5,5,5]
+
+def second_largest(nums):
+    second = largest = nums[0]
+    for item in nums:
+        if item > largest:
+            second = largest
+            largest = item
+        elif item > second and item != largest:
+            second = item
+    return second
+
+print("Second largest number in the list: ", second_largest(list6))
